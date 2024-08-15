@@ -1,17 +1,13 @@
-package hello.core.order;
+package hello.core2.order;
 
-import hello.core.AppConfig;
-import hello.core.member.Grade;
-import hello.core.member.Member;
-import hello.core.member.MemberService;
-import hello.core.member.MemberServiceImpl;
-import jakarta.annotation.Nullable;
+import hello.core2.AppConfig;
+import hello.core2.member.Grade;
+import hello.core2.member.Member;
+import hello.core2.member.MemberService;
+import hello.core2.member.MemberServiceImpl;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Autowired;
-
-import java.util.Optional;
 
 public class OrderServiceTest {
 
@@ -34,6 +30,4 @@ public class OrderServiceTest {
         Order order = orderService.createOrder(memberId, "itemA", 10000);
         Assertions.assertThat(order.getDiscountPrice()).isEqualTo(1000);
     }
-
-
 }
